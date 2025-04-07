@@ -5,7 +5,7 @@
 # ProTiler-Mut
 
 ## Introduction of ProTiler-Mut 
-<div align="left"><img src="Figures/moff-high-resolution-logo-color-on-transparent-background.png"  height="140" width="600"></div>
+<div align="left"><img src="StaticFiles/ProTiler-Mut_logo.png"  height="140" width="600"></div>
                                      
 
     Hi, this is ProTiler-Mut, a computational pipeline designed for comprehensive analysis of tiling mutagenesis screen data
