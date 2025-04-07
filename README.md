@@ -38,10 +38,11 @@ With Docker no installation is required, the only dependence is Docker itself. U
 
 Docker can be downloaded freely from here: https://store.docker.com/search?offering=community&type=edition
 
-To get an image of STREAM, simply execute the following command:
+To get an image of ProTiler-Mut, simply execute the following command:
 ```console   
 $ docker pull MDhewei/ProTiler-Mut
  ```
+
 ## How to use ProTiler-Mut
 
 ### 1. ProTiler-Mut cluster: Perform the clustering and categorization of functional mutations
