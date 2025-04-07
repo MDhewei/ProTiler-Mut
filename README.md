@@ -78,7 +78,7 @@ Step4: **OR** you can install ProTiler-Mut through Docker
                         The symbol of targeted protein-coding gene, for example: ERCC2
        -i INPUTFILE, --inputfile INPUTFILE
                         Path output tables file generated in cluster module which annotat the significant mutations, their
-                        cluster assignment and residue position
+                        cluster assignment and residue position, See example file [here.](https://github.com/MDhewei/MOFF/blob/master/MOFF/MOFFscore_test.txt)
        -p PDB, --pdb PDB     File path to the PDB of targeted protein structure
        -n N, --n N           Number of mutation samples for RRA analysis
 
@@ -92,6 +92,36 @@ Step4: **OR** you can install ProTiler-Mut through Docker
                         Distance threshold to identify surrounding signals near identified seed mutations(default: 5.0 Å).
        -o OUTPUT_FOLDER, --output-folder OUTPUT_FOLDER
                          Output folder for results.
+
+ ### 3. ProTiler-Mut ppi-mapping: Perform PPI-mapping for specific mutation or substructure to identify mutaiton-associated PPIs
+
+       usage: protiler-mut.py ppi-mapping [-h] -g GENE_ID -i INPUTFILE -f PDB_FILES -b CHAINS [-t DISTANCE_THRESHOLD]
+                                   [-o OUTPUT_FOLDER]
+
+       optional arguments:
+       -h, --help            show this help message and exit
+
+       Required arguments for PPI-mapping.:
+
+       -g GENE_ID, --gene_id GENE_ID
+                        The symbol of targeted protein-coding gene, for example: ERCC2
+       -i INPUTFILE, --inputfile INPUTFILE
+                        Path output tables file generated in cluster module which annotat the significant mutations, their
+                        cluster assignment and residue position, See example file [here.](https://github.com/MDhewei/MOFF/blob/master/MOFF/MOFFscore_test.txt)
+       -f PDB_FILES, --pdb-files PDB_FILES
+                        Comma-separated list of paths of protein complex PDB files involving the target protein.
+       -b CHAINS, --chains CHAINS
+                        Comma-separated list of corresponding chain IDs of the target protein(e.g., A,B,A).
+
+       Optional arguments for PPI mapping.:
+
+       -t DISTANCE_THRESHOLD, --distance-threshold DISTANCE_THRESHOLD
+                        Distance threshold to determine whether two residues interact between among different
+                        chains(default: 5.0 Å).
+       -o OUTPUT_FOLDER, --output-folder OUTPUT_FOLDER
+                        Output folder for results.
+
+   
 
  
 
