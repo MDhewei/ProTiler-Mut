@@ -21,27 +21,27 @@
                                      
 
 ## Installation 
- Step1: Install Anaconda (highly recomended)
-    
- ```console
- wget https://repo.continuum.io/archive/Anaconda2-2018.12-Linux-x86_64.sh 
- bash Anaconda2-2018.12-Linux-x86_64.sh 
- ```
-
- Step2: Install ProTiler-Mut through pip
+ ### There are three ways to install ProTiler-Mut
+ #### Step2: Install ProTiler-Mut through pip
  ```console     
  pip install ProTiler-Mut
  ```
     
- Step3: **OR** you can install ProTiler-Mut through git clone
+ #### **OR** you can install ProTiler-Mut through git clone
  ```console   
  git clone https://github.com/MDhewei/ProTiler-Mut.git
  cd ProTiler-Mut
  python setup.py install
  ```
+#### **OR** you can install ProTiler-Mut through Docker
+With Docker no installation is required, the only dependence is Docker itself. Users will completely get rid of all the installation and configuration issues. Docker will do all the dirty work for you!
 
-Step4: **OR** you can install ProTiler-Mut through Docker
+Docker can be downloaded freely from here: https://store.docker.com/search?offering=community&type=edition
 
+To get an image of STREAM, simply execute the following command:
+```console   
+$ docker pull MDhewei/ProTiler-Mut
+ ```
 ## How to use ProTiler-Mut
 
 ### 1. ProTiler-Mut cluster: Perform the clustering and categorization of functional mutations
