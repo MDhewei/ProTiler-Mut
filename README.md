@@ -42,7 +42,7 @@ Step4: **OR** you can install ProTiler-Mut through Docker
        -i INPUTFILE, --inputfile INPUTFILE
                         The inputfile contains information of tiling mutagenesis screens including symbol of target
                         gene(s),targeted residue position, mutation types and phenotypic scores. Accept .txt, .cvs or
-                        .xlsx fileformats. See example file [here.](https://github.com/MDhewei/MOFF/blob/master/MOFF/MOFFscore_test.txt)
+                        .xlsx fileformats. 
        -g GENE_ID, --gene_id GENE_ID
                         The symbol of targeted protein-coding gene, for example: ERCC2
        -s SAMPLES, --samples SAMPLES
@@ -78,7 +78,7 @@ Step4: **OR** you can install ProTiler-Mut through Docker
                         The symbol of targeted protein-coding gene, for example: ERCC2
        -i INPUTFILE, --inputfile INPUTFILE
                         Path output tables file generated in cluster module which annotat the significant mutations, their
-                        cluster assignment and residue position, See example file [here.](https://github.com/MDhewei/MOFF/blob/master/MOFF/MOFFscore_test.txt)
+                        cluster assignment and residue position
        -p PDB, --pdb PDB     File path to the PDB of targeted protein structure
        -n N, --n N           Number of mutation samples for RRA analysis
 
@@ -107,7 +107,7 @@ Step4: **OR** you can install ProTiler-Mut through Docker
                         The symbol of targeted protein-coding gene, for example: ERCC2
        -i INPUTFILE, --inputfile INPUTFILE
                         Path output tables file generated in cluster module which annotat the significant mutations, their
-                        cluster assignment and residue position, See example file [here.](https://github.com/MDhewei/MOFF/blob/master/MOFF/MOFFscore_test.txt)
+                        cluster assignment and residue position, See example file
        -f PDB_FILES, --pdb-files PDB_FILES
                         Comma-separated list of paths of protein complex PDB files involving the target protein.
        -b CHAINS, --chains CHAINS
