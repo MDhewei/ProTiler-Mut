@@ -42,7 +42,7 @@ Step4: **OR** you can install ProTiler-Mut through Docker
        -i INPUTFILE, --inputfile INPUTFILE
                         The inputfile contains information of tiling mutagenesis screens including symbol of target
                         gene(s),targeted residue position, mutation types and phenotypic scores. Accept .txt, .cvs or
-                        .xlsx fileformats
+                        .xlsx fileformats. See example file [here.](https://github.com/MDhewei/MOFF/blob/master/MOFF/MOFFscore_test.txt)
        -g GENE_ID, --gene_id GENE_ID
                         The symbol of targeted protein-coding gene, for example: ERCC2
        -s SAMPLES, --samples SAMPLES
@@ -63,4 +63,35 @@ Step4: **OR** you can install ProTiler-Mut through Docker
                         Generate pdf report of clustering, visualization and annotation.
         -o OUTPUT_FOLDER, --output-folder OUTPUT_FOLDER
                         Output folder for saving the results.
+
+### 2. ProTiler-Mut 3d-rra: Perform "3D-RRA" to call significant substructures in specific mutation clusters
+
+       usage: protiler-mut.py 3d-rra [-h] -g GENE_ID -i INPUTFILE -p PDB -n N [-r NUM_PERMUTATIONS] [-t1 DISTANCE_THRESHOLD1]
+                              [-t2 DISTANCE_THRESHOLD2] [-o OUTPUT_FOLDER]
+
+       optional arguments:
+       -h, --help            show this help message and exit
+
+       Required arguments for 3D-RRA.:
+
+       -g GENE_ID, --gene_id GENE_ID
+                        The symbol of targeted protein-coding gene, for example: ERCC2
+       -i INPUTFILE, --inputfile INPUTFILE
+                        Path output tables file generated in cluster module which annotat the significant mutations, their
+                        cluster assignment and residue position
+       -p PDB, --pdb PDB     File path to the PDB of targeted protein structure
+       -n N, --n N           Number of mutation samples for RRA analysis
+
+       Optional arguments for 3D-RRA.:
+
+       -r NUM_PERMUTATIONS, --num-permutations NUM_PERMUTATIONS
+                        Number of permutations (default: 10000).
+       -t1 DISTANCE_THRESHOLD1, --distance-threshold1 DISTANCE_THRESHOLD1
+                        Distance threshold to identify clusters of seed mutations on 3D structure(default: 10.0 Å).
+       -t2 DISTANCE_THRESHOLD2, --distance-threshold2 DISTANCE_THRESHOLD2
+                        Distance threshold to identify surrounding signals near identified seed mutations(default: 5.0 Å).
+       -o OUTPUT_FOLDER, --output-folder OUTPUT_FOLDER
+                         Output folder for results.
+
+ 
 
