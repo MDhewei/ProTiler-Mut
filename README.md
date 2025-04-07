@@ -3,7 +3,22 @@
 ![](https://img.shields.io/badge/language-python-orange.svg)
 
 # ProTiler-Mut
-Computational pipeline for comprehensive analysis of tiling mutagenesis screen data 
+
+## Introduction of ProTiler-Mut 
+<div align="left"><img src="Figures/moff-high-resolution-logo-color-on-transparent-background.png"  height="140" width="600"></div>
+                                     
+
+    Hi, this is ProTiler-Mut, a computational pipeline designed for comprehensive analysis of tiling mutagenesis screen data
+    
+    I have three major functions: 1). Clustering and Categorization of functional mutations from tiling mutagenesis screens
+                                  2). "3D-RRA" module for robust identification of functional substructures from identified mutation clusters
+                                  3). PPI-mapping for specific mutation or substructure to identify mutaiton-associated PPIs
+    
+    
+    Hope you enjoy playing with me ^o^!
+                                     
+    Any questions or bugs, please contact hwkobe.1027@gmail.com or whe3@mdanderson.org
+                                     
 
 ### Installation 
  Step1: Install Anaconda (highly recomended)
