@@ -29,38 +29,38 @@ Step4: **OR** you can install ProTiler-Mut through Docker
 
 ## How to use ProTiler-Mut
 
-### 1. ProTiler-Mut cluster: Perform the clustering of 
+### 1. ProTiler-Mut cluster: Perform the clustering and categorization of functional mutations
 
-usage: protiler-mut.py cluster [-h] -i INPUTFILE -g GENE_ID -s SAMPLES -c CONTROL [-p PDB] [-n N_CLUSTERS] [-m METHOD]
-                               [-d METRIC] [--pdf-report PDF_REPORT] [-o OUTPUT_FOLDER]
+       usage: protiler-mut.py cluster [-h] -i INPUTFILE -g GENE_ID -s SAMPLES -c CONTROL [-p PDB] [-n N_CLUSTERS] [-m METHOD]
+                                      [-d METRIC] [--pdf-report PDF_REPORT] [-o OUTPUT_FOLDER]
 
-optional arguments:
-  -h, --help            show this help message and exit
+       optional arguments:
+       -h, --help            show this help message and exit
 
-Required arguments for clustering.:
+       Required arguments for clustering.:
 
-  -i INPUTFILE, --inputfile INPUTFILE
+       -i INPUTFILE, --inputfile INPUTFILE
                         The inputfile contains information of tiling mutagenesis screens including symbol of target
                         gene(s),targeted residue position, mutation types and phenotypic scores. Accept .txt, .cvs or
                         .xlsx fileformats
-  -g GENE_ID, --gene_id GENE_ID
+       -g GENE_ID, --gene_id GENE_ID
                         The symbol of targeted protein-coding gene, for example: ERCC2
-  -s SAMPLES, --samples SAMPLES
+       -s SAMPLES, --samples SAMPLES
                         Comma-separated sample column names.eg., "CISP,OLAP,DOX,CPT"
-  -c CONTROL, --control CONTROL
+       -c CONTROL, --control CONTROL
                         Comma-separated control column names.eg., T0
 
-Optional arguments for clustering.:
+       Optional arguments for clustering.:
 
-  -p PDB, --pdb PDB     File path to the PDB of targeted protein structure.
-  -n N_CLUSTERS, --n-clusters N_CLUSTERS
+       -p PDB, --pdb PDB     File path to the PDB of targeted protein structure.
+       -n N_CLUSTERS, --n-clusters N_CLUSTERS
                         Number of clusters for clustering analysis.
-  -m METHOD, --method METHOD
+       -m METHOD, --method METHOD
                         Clustering linkage method (default: average).
-  -d METRIC, --metric METRIC
+       -d METRIC, --metric METRIC
                         Clustering metric (default: euclidean).
-  --pdf-report PDF_REPORT
+       --pdf-report PDF_REPORT
                         Generate pdf report of clustering, visualization and annotation.
-  -o OUTPUT_FOLDER, --output-folder OUTPUT_FOLDER
+        -o OUTPUT_FOLDER, --output-folder OUTPUT_FOLDER
                         Output folder for saving the results.
 
