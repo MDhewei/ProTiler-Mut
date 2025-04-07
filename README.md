@@ -5,7 +5,7 @@
 # ProTiler-Mut
 
 ## Introduction of ProTiler-Mut 
-<div align="left"><img src="StaticFiles/ProTiler-Mut_logo.png"  height="140" width="800"></div>
+<div align="left"><img src="StaticFiles/ProTiler-Mut_logo.png"  height="140" width="1000"></div>
                                      
 
     Hi, this is ProTiler-Mut, a computational pipeline designed for comprehensive analysis of tiling mutagenesis screen data
