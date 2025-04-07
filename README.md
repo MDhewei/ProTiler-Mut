@@ -137,7 +137,7 @@ $ docker pull MDhewei/ProTiler-Mut
        -o OUTPUT_FOLDER, --output-folder OUTPUT_FOLDER
                         Output folder for results.
 
- For a detailed tutorial to run ProTiler-Mut, please refer to the video at Youtube https://www.youtube.com/@bioinforbricker  
+ ## For a detailed tutorial to run ProTiler-Mut, please refer to the video at Youtube https://www.youtube.com/@bioinforbricker  
 
  
 
