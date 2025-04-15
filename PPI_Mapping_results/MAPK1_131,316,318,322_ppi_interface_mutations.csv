@@ -1,0 +1,37 @@
+PDB_File,Mutation_Chain,Mutation,At_Interface,Contact_Count,Contact_Details,Gene
+../MAPK1_PDBs/2fys.pdb,A,131,False,0,,MAPK1
+../MAPK1_PDBs/2fys.pdb,A,316,True,1,C:64-ARG,MAPK1
+../MAPK1_PDBs/2fys.pdb,A,318,False,0,,MAPK1
+../MAPK1_PDBs/2fys.pdb,A,322,False,0,,MAPK1
+../MAPK1_PDBs/2y9q.pdb,A,131,True,2,B:444-LEU; B:448-ARG,MAPK1
+../MAPK1_PDBs/2y9q.pdb,A,316,True,4,B:439-PRO; B:445-ALA; B:448-ARG; B:2016-HOH,MAPK1
+../MAPK1_PDBs/2y9q.pdb,A,318,True,2,B:448-ARG; B:2019-HOH,MAPK1
+../MAPK1_PDBs/2y9q.pdb,A,322,True,1,B:448-ARG,MAPK1
+../MAPK1_PDBs/3d42.pdb,A,131,False,0,,MAPK1
+../MAPK1_PDBs/3d42.pdb,A,316,False,0,,MAPK1
+../MAPK1_PDBs/3d42.pdb,A,318,False,0,,MAPK1
+../MAPK1_PDBs/3d42.pdb,A,322,False,0,,MAPK1
+../MAPK1_PDBs/3o71.pdb,A,131,False,0,,MAPK1
+../MAPK1_PDBs/3o71.pdb,A,316,False,0,,MAPK1
+../MAPK1_PDBs/3o71.pdb,A,318,False,0,,MAPK1
+../MAPK1_PDBs/3o71.pdb,A,322,False,0,,MAPK1
+../MAPK1_PDBs/3tei.pdb,A,131,True,2,B:722-LEU; B:726-ARG,MAPK1
+../MAPK1_PDBs/3tei.pdb,A,316,True,3,B:717-ILE; B:723-ALA; B:726-ARG,MAPK1
+../MAPK1_PDBs/3tei.pdb,A,318,True,1,B:726-ARG,MAPK1
+../MAPK1_PDBs/3tei.pdb,A,322,True,1,B:726-ARG,MAPK1
+../MAPK1_PDBs/4fmq.pdb,A,131,True,2,B:444-LEU; B:448-ARG,MAPK1
+../MAPK1_PDBs/4fmq.pdb,A,316,True,3,B:439-LEU; B:445-ALA; B:448-ARG,MAPK1
+../MAPK1_PDBs/4fmq.pdb,A,318,True,1,B:448-ARG,MAPK1
+../MAPK1_PDBs/4fmq.pdb,A,322,True,1,B:448-ARG,MAPK1
+../MAPK1_PDBs/4nif.pdb,A,131,False,0,,MAPK1
+../MAPK1_PDBs/4nif.pdb,A,316,False,0,,MAPK1
+../MAPK1_PDBs/4nif.pdb,A,318,False,0,,MAPK1
+../MAPK1_PDBs/4nif.pdb,A,322,False,0,,MAPK1
+../MAPK1_PDBs/7ugb.pdb,A,131,True,2,I:168-ILE; I:172-ARG,MAPK1
+../MAPK1_PDBs/7ugb.pdb,A,316,True,6,I:168-ILE; I:169-ARG; I:172-ARG; I:174-LEU; I:177-LEU; I:201-HOH,MAPK1
+../MAPK1_PDBs/7ugb.pdb,A,318,True,1,I:172-ARG,MAPK1
+../MAPK1_PDBs/7ugb.pdb,A,322,True,1,I:172-ARG,MAPK1
+../MAPK1_PDBs/8pvu.pdb,A,131,False,0,,MAPK1
+../MAPK1_PDBs/8pvu.pdb,A,316,True,1,B:106-ASN,MAPK1
+../MAPK1_PDBs/8pvu.pdb,A,318,False,0,,MAPK1
+../MAPK1_PDBs/8pvu.pdb,A,322,True,3,B:154-ARG; B:155-GLY; B:165-ARG,MAPK1

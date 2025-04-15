@@ -1,0 +1,2 @@
+[console_scripts]
+protiler-mut = protiler_mut.cli:main
