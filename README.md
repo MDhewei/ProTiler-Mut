@@ -31,7 +31,7 @@
  ```console   
  git clone https://github.com/MDhewei/ProTiler-Mut.git
  cd ProTiler-Mut
- python setup.py install
+ pip install -r requirements.txt -e .
  ```
 #### OR you can install ProTiler-Mut through Docker
 With Docker no installation is required, the only dependence is Docker itself. Users will completely get rid of all the installation and configuration issues. Docker will do all the dirty work for you!
