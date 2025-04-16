@@ -25,10 +25,8 @@
 
 ### Dependencies
 > **Python Packages**:
-- biopython==1.79, matplotlib==3.5.3, mygene==3.2.2
-- numpy==1.21.6, pandas==1.3.5, Requests==2.32.3
-- rich==14.0.0, scikit_learn==0.20.0, scipy==1.7.3
-- seaborn==0.13.2, setuptools==68.0.0, statsmodels==0.13.5, umap_learn==0.5.3
+- Bio==1.7.1, biopython==1.79, matplotlib==3.5.3, mygene==3.2.2, numpy==1.21.6, pandas==1.3.5, Requests==2.32.3
+- rich==14.0.0, scikit_learn==0.20.0, scipy==1.7.3, seaborn==0.13.2, setuptools==68.0.0, statsmodels==0.13.5, umap_learn==0.5.3
 
 > **Pymol is required for ProTiler-Mut, install it using following command:**
 ```console   
