@@ -14,6 +14,19 @@ license = { text = "GUN" }
 authors = [{ name = "Wei He", email = "hwkobe.1027@gmail.com" }]
 requires-python = ">=3.7"
 
+dependencies = [
+    "numpy>=1.20",
+    "pandas>=1.3",
+    "scikit-learn==0.20.0",
+    "scipy>=1.7",
+    "click",
+    "requests",
+    "matplotlib",
+    "rich==14.0.0",
+    "umap_learn",
+]
+
+
 [project.urls]
 "Homepage" = "https://github.com/MDhewei/ProTiler-Mut"
 
