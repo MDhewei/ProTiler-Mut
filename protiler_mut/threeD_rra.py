@@ -312,6 +312,9 @@ def efficient_rra_permutation(rank_list, df_be, n, num_permutations=100000, sign
 
 def RRA_3D(gene,df_all,df_gene,df_clust,pdbfile,th1,th2,output_folder,num_permutations=10000,significance_cutoff=0.25):
     
+    if output_folder is not None and not os.path.exists(output_folder):
+        os.makedirs(output_folder)
+    
     cluster_assign = []; substr_ls = []; sigaa_ls = []; 
     Ro_ls = []; p_ls = []; fdr_ls = []
     
@@ -355,9 +358,9 @@ import pandas as pd
 
 def visualize_substructure(df_substr: pd.DataFrame,
                           pdb_file: str,
-                          gene,
-                          object_name: str = 'structure',
-                          output_dir: str = 'cluster_sessions'):
+                          gene,outputfolder,
+                          object_name: str = 'structure'
+                          ):
     """
     For each cluster in df_substr, load the PDB, highlight its substructures,
     and save the entire PyMOL session as a .pse file.
@@ -370,9 +373,9 @@ def visualize_substructure(df_substr: pd.DataFrame,
         object_name (str): name to give the loaded object in PyMOL
         output_dir (str): directory where .pse files will be saved
     """
-    finish_launching()
+    #finish_launching()
     # Ensure output directory exists
-    os.makedirs(output_dir, exist_ok=True)
+    #os.makedirs(output_dir, exist_ok=True)
 
     # Load structure once
     cmd.reinitialize()
@@ -411,12 +414,12 @@ def visualize_substructure(df_substr: pd.DataFrame,
         cmd.zoom(object_name)
 
         # Save the session
-        session_path = os.path.join(output_dir, gene+f"_{cluster}.pse")
+        session_path = os.path.join(outputfolder, gene+f"_{cluster}.pse")
         cmd.save(session_path)
         print(f"Saved session for {cluster} → {session_path}")
 
 __all__ = [
-    "RRA_3D","visualize_substructure",
+    "RRA_3D","visualize_substructure","get_uniprot_id_from_gene_symbol"
 ]
 # Example usage:
 if __name__ == '__main__':

@@ -108,8 +108,7 @@ def build_ppi_interface_table(gene,mut_aa_list:list, pdb_files: list,chain_list:
             })
      
     df_interface = pd.DataFrame(records)
-    df_interface['Gene'] = [gene]*df_interface.shape[0]
-    
+    df_interface['Gene'] = [gene]*df_interface.shape[0]    
 #     if output_folder is not None:
 #         if not os.path.exists(output_folder):
 #             os.makedirs(output_folder)

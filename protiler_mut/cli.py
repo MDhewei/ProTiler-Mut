@@ -124,6 +124,7 @@ def main():
     
     if args.subcmd == "cluster":
         df_all = pd.read_csv(args.inputfile)
+        df_all.index = df_all['Function']
         sample_list = args.samples.split(',')
         control = args.control
         gene = args.gene_id; n_cluster = args.n_clusters
@@ -157,6 +158,7 @@ def main():
         th = args.significance_threshold
         gene = args.gene_id; pdb = args.pdb; th1 = args.distance_threshold1; th2 = args.distance_threshold2
         df_all = pd.read_csv(args.inputfile)
+        outputfolder = args.outputfolder
         df_all['Rank'] = abs(df_all['score']).rank(ascending=False)/df_all.shape[0]
         
         df_sig = df_all[abs(df_all['score'])>th]
@@ -165,8 +167,8 @@ def main():
         df_clust = pd.read_csv(args.clustertable)
         df_clust = df_clust.dropna(subset=['AA'])
         df_substr = RRA_3D(gene, df_all, df_gene, df_clust, pdb, th1, th2, 
-                           args.outputfolder,args.num_permutations,args.top_cutoff)
-        visualize_substructure(df_substr,pdb,gene)
+                           outputfolder,args.num_permutations,args.top_cutoff)
+        visualize_substructure(df_substr,pdb,gene,outputfolder)
         logging.info("3D-RRA analysis completed. Results saved in %s", args.outputfolder)
     
     elif args.subcmd == "ppi-mapping":

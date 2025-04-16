@@ -367,12 +367,12 @@ def annotation(dicts,df_clust,gene,output_folder,pdb_path=None):
     if output_folder is not None and not os.path.exists(output_folder):
         os.makedirs(output_folder)
     
+    df_clust = df_clust.dropna(subset=['AA'])
     ## Annotate alphafold score
     if gene in alpha_dic:
         alpha_ls = []
         for aa in df_clust['AA']:
             score = 'NA'
-            print(str(int(aa)))
             if aa != 'NA' and str(int(aa)) in alpha_dic[gene]:
                 score = round(np.mean(alpha_dic[gene][str(int(aa))]),3)
             alpha_ls.append(score)
@@ -435,7 +435,7 @@ def annotation(dicts,df_clust,gene,output_folder,pdb_path=None):
         df_clust['ASA'] = ['NA'] * df_clust.shape[0]
     
     else:
-        # Attempt to parse the PDB structure
+        print('Attempt to parse the PDB structure')
         try:
             parser = PDBParser(PERMISSIVE=1, QUIET=True)
             structure = parser.get_structure('', pdb_path)
@@ -467,6 +467,7 @@ def annotation(dicts,df_clust,gene,output_folder,pdb_path=None):
             rd_ls = []; asa_ls = []
             # Assuming df_clust['AA'] holds residue numbers (integers)
             for aa in df_clust['AA']:
+                aa = int(aa)
                 try:
                     if chain is not None and surface is not None and dssp is not None:
                         # Get the residue from chain using the residue number directly
@@ -724,10 +725,11 @@ def visualization_1d(dicts,df_all,
 
     fig_save_path = os.path.join(os.getcwd(), output_folder, f"{gene}_ClusterDistribution_1D.png")
     plt.savefig(fig_save_path, dpi=300, facecolor="white", bbox_inches="tight")
+    print(f"1D clusering map saved to: {fig_save_path}")
     plt.show()
     
 
-def visualization_3d(gene, clust_ls, output_folder, pdb=None):
+def visualization_3d(gene, clust_ls, output_folder, pdb_path=None):
     
     if output_folder is not None and not os.path.exists(output_folder):
         os.makedirs(output_folder)
@@ -756,7 +758,7 @@ def visualization_3d(gene, clust_ls, output_folder, pdb=None):
                  'GLY':'G', 'PRO':'P', 'CYS':'C'}
     
     n = 0
-    for ix_ls in cluster_ls:
+    for ix_ls in clust_ls:
         sel = '+'.join([str(num) for num in ix_ls])
         print(sel)
         
