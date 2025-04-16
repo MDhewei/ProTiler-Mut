@@ -20,10 +20,12 @@
     Any questions or bugs, please contact hwkobe.1027@gmail.com or whe3@mdanderson.org
                                      
 
-## Installation 
-### ProTiler-Mut is written in Python, Python>=3.7.0 is needed
+## Installation
 
-### Dependencies
+#### If Anaconda (or miniconda) is not installed with Python 3, it is highly recommended to download and install Python3 Anaconda from here: https://www.anaconda.com/download/
+
+### Dependencies (the specific version used when developing the tool, other versions should also be OK, if it is not,please install the exact version)
+
 > **Python Packages**:
 - Bio==1.7.1, biopython==1.79, matplotlib==3.5.3, mygene==3.2.2, numpy==1.21.6, pandas==1.3.5, Requests==2.32.3
 - rich==14.0.0, scikit_learn==0.20.0, scipy==1.7.3, seaborn==0.13.2, setuptools==68.0.0, statsmodels==0.13.5, umap_learn==0.5.3
