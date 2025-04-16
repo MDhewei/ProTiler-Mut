@@ -21,18 +21,31 @@
                                      
 
 ## Installation 
- ### There are three ways to install ProTiler-Mut
- #### Install ProTiler-Mut through pip
+
+ProTiler-Mut is written in Python, Python>=3.7.0 needed
+
+### Dependencies
+> **Python Packages**:
+- scikit-learn==0.22.1, matplotlib >=2.2.3, pandas >=1.2.0, numpy >=1.17.5, seaborn >=0.9.0
+
+> Pymol is required for ProTiler-Mut, install it
+```console   
+conda install -c conda-forge pymol-open-source
+```
+
+### There are three ways to install ProTiler-Mut
+#### Install ProTiler-Mut through pip
  ```console     
  pip install ProTiler-Mut
  ```
     
- #### OR you can install ProTiler-Mut through git clone
- ```console   
- git clone https://github.com/MDhewei/ProTiler-Mut.git
- cd ProTiler-Mut
- pip install -r requirements.txt .
- ```
+#### OR you can install ProTiler-Mut through git clone
+```console   
+git clone https://github.com/MDhewei/ProTiler-Mut.git
+cd ProTiler-Mut
+pip install -r requirements.txt .
+```
+
 #### OR you can install ProTiler-Mut through Docker
 With Docker no installation is required, the only dependence is Docker itself. Users will completely get rid of all the installation and configuration issues. Docker will do all the dirty work for you!
 
