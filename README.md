@@ -21,21 +21,33 @@
                                      
 
 ## Installation 
-
-ProTiler-Mut is written in Python, Python>=3.7.0 needed
+### ProTiler-Mut is written in Python, Python>=3.7.0 is needed
 
 ### Dependencies
 > **Python Packages**:
-- scikit-learn==0.22.1, matplotlib >=2.2.3, pandas >=1.2.0, numpy >=1.17.5, seaborn >=0.9.0
+- biopython==1.79
+- matplotlib==3.5.3
+- mygene==3.2.2
+- numpy==1.21.6
+- pandas==1.3.5
+- Requests==2.32.3
+- rich==14.0.0
+- scikit_learn==0.20.0
+- scipy==1.7.3
+- seaborn==0.13.2
+- setuptools==68.0.0
+- statsmodels==0.13.5
+- umap_learn==0.5.3
 
 > **Pymol is required for ProTiler-Mut, install it using following command:**
 ```console   
 conda install -c conda-forge pymol-open-source
 ```
-> On macOS, you need this command in addition:
+> **On macOS, you need this command in addition:**
 ```console  
 pip install PyQt5
 ```
+
 ### There are three ways to install ProTiler-Mut
 #### Install ProTiler-Mut through pip
  ```console     
