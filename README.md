@@ -24,7 +24,7 @@
 
 #### If Anaconda (or miniconda) is not installed with Python 3, it is highly recommended to download and install Python3 Anaconda from here: https://www.anaconda.com/download/
 
-### Dependencies (the specific version used when developing the tool, other versions should also be OK, if it is not,please install the exact version)
+#### Dependencies (the specific version used when developing the tool, other versions should also be OK, if it is not,please install the exact version)
 
 > **Python Packages**:
 - Bio==1.7.1, biopython==1.79, matplotlib==3.5.3, mygene==3.2.2, numpy==1.21.6, pandas==1.3.5, Requests==2.32.3
