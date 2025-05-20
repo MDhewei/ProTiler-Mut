@@ -56,7 +56,7 @@ cd ProTiler-Mut
 pip install -r requirements.txt .
 ```
 
-#### OR you can install ProTiler-Mut through Docker
+#### OR you can install ProTiler-Mut through Docker (Still under development)
 With Docker no installation is required, the only dependence is Docker itself. Users will completely get rid of all the installation and configuration issues. Docker will do all the dirty work for you!
 
 Docker can be downloaded freely from here: https://store.docker.com/search?offering=community&type=edition
@@ -67,10 +67,16 @@ $ docker pull MDhewei/ProTiler-Mut
  ```
 
 ## How to use ProTiler-Mut
+### There are three ways to install ProTiler-Mut
 
-### 1. ProTiler-Mut cluster: Perform the clustering and categorization of functional mutations
+### 1.Integrate protiler-mut funcitonal modules into your own python code
+ProTiler-mut can be directly imported in python IDE, seemlessly intergrated into any python code.
+A demo to run protiler-mut as python code can be found here: [Demo.ipynb](https://github.com/MDhewei/ProTiler-Mut/blob/main/Demo.ipynb)
 
-       usage: protiler-mut.py cluster [-h] -i INPUTFILE -g GENE_ID -s SAMPLES -c CONTROL [-p PDB] [-n N_CLUSTERS] [-m METHOD]
+### 2. Use command lines as a standalone software
+#### ProTiler-Mut cluster: Perform the clustering and categorization of functional mutations
+
+       usage: protiler-mut cluster [-h] -i INPUTFILE -g GENE_ID -s SAMPLES -c CONTROL [-p PDB] [-n N_CLUSTERS] [-m METHOD]
                                       [-d METRIC] [--pdf-report PDF_REPORT] [-o OUTPUT_FOLDER]
 
        optional arguments:
@@ -103,9 +109,9 @@ $ docker pull MDhewei/ProTiler-Mut
         -o OUTPUT_FOLDER, --output-folder OUTPUT_FOLDER
                         Output folder for saving the results.
 
-### 2. ProTiler-Mut 3d-rra: Perform "3D-RRA" to call significant substructures in specific mutation clusters
+#### ProTiler-Mut 3d-rra: Perform "3D-RRA" to call significant substructures in specific mutation clusters
 
-       usage: protiler-mut.py 3d-rra [-h] -g GENE_ID -i INPUTFILE -p PDB -n N [-r NUM_PERMUTATIONS] [-t1 DISTANCE_THRESHOLD1]
+       usage: protiler-mut 3d-rra [-h] -g GENE_ID -i INPUTFILE -p PDB -n N [-r NUM_PERMUTATIONS] [-t1 DISTANCE_THRESHOLD1]
                               [-t2 DISTANCE_THRESHOLD2] [-o OUTPUT_FOLDER]
 
        optional arguments:
@@ -132,7 +138,7 @@ $ docker pull MDhewei/ProTiler-Mut
        -o OUTPUT_FOLDER, --output-folder OUTPUT_FOLDER
                          Output folder for results.
 
- ### 3. ProTiler-Mut ppi-mapping: Perform PPI-mapping for specific mutation or substructure to identify mutaiton-associated PPIs
+ #### 4. ProTiler-Mut ppi-mapping: Perform PPI-mapping for specific mutation or substructure to identify mutaiton-associated PPIs
 
        usage: protiler-mut.py ppi-mapping [-h] -g GENE_ID -i INPUTFILE -f PDB_FILES -b CHAINS [-t DISTANCE_THRESHOLD]
                                    [-o OUTPUT_FOLDER]
