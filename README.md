@@ -111,37 +111,43 @@ A demo notebook demonstrating how to use ProTiler-Mut as a Python package is ava
 
 #### (2) ProTiler-Mut 3d-rra: Perform "3D-RRA" to call significant substructures in specific mutation clusters
 
-       usage: protiler-mut 3d-rra [-h] -g GENE_ID -i INPUTFILE -p PDB -n N [-r NUM_PERMUTATIONS] [-t1 DISTANCE_THRESHOLD1]
-                              [-t2 DISTANCE_THRESHOLD2] [-o OUTPUT_FOLDER]
+       usage: protiler-mut 3d-rra [-h] -i INPUTFILE -g GENE_ID -c CLUSTERTABLE -p PDB [-t SIGNIFICANCE_THRESHOLD]
+                           [-r NUM_PERMUTATIONS] [-t3 TOP_CUTOFF] [-t1 DISTANCE_THRESHOLD1] [-t2 DISTANCE_THRESHOLD2]
+                           [-o OUTPUTFOLDER]
 
        optional arguments:
        -h, --help            show this help message and exit
 
        Required arguments for 3D-RRA.:
 
+       -i INPUTFILE, --inputfile INPUTFILE
+                        The inputfile contains information of tiling mutagenesis screens including symbol of target
+                        gene(s),targeted residue position, mutation types and phenotypic scores. Accept .txt, .cvs or .xlsx
+                        fileformats
        -g GENE_ID, --gene_id GENE_ID
                         The symbol of targeted protein-coding gene, for example: ERCC2
-       -i INPUTFILE, --inputfile INPUTFILE
+       -c CLUSTERTABLE, --clustertable CLUSTERTABLE
                         Path output tables file generated in cluster module which annotat the significant mutations, their
                         cluster assignment and residue position
        -p PDB, --pdb PDB     File path to the PDB of targeted protein structure
-       -n N, --n N           Number of mutation samples for RRA analysis
 
        Optional arguments for 3D-RRA.:
 
-       -r NUM_PERMUTATIONS, --num-permutations NUM_PERMUTATIONS
+       -t SIGNIFICANCE_THRESHOLD, --significance_threshold SIGNIFICANCE_THRESHOLD
+                        Threshold to determine significant mutation in the screen
+       -r NUM_PERMUTATIONS, --num_permutations NUM_PERMUTATIONS
                         Number of permutations (default: 10000).
-       -t1 DISTANCE_THRESHOLD1, --distance-threshold1 DISTANCE_THRESHOLD1
-                        Distance threshold to identify clusters of seed mutations on 3D structure(default: 10.0 Å).
-       -t2 DISTANCE_THRESHOLD2, --distance-threshold2 DISTANCE_THRESHOLD2
+       -t3 TOP_CUTOFF, --top_cutoff TOP_CUTOFF
+                        Top percentile signals used for RRA analysis (default: 0.25.)
+       -t1 DISTANCE_THRESHOLD1, --distance_threshold1 DISTANCE_THRESHOLD1
+                        Distance threshold to identify clusters of seed mutations on 3D structure(default: 15.0 Å).
+       -t2 DISTANCE_THRESHOLD2, --distance_threshold2 DISTANCE_THRESHOLD2
                         Distance threshold to identify surrounding signals near identified seed mutations(default: 5.0 Å).
-       -o OUTPUT_FOLDER, --output-folder OUTPUT_FOLDER
-                         Output folder for results.
+       -o OUTPUTFOLDER, --outputfolder OUTPUTFOLDER
+                        Output folder for results.
 
  #### (3). ProTiler-Mut ppi-mapping: Perform PPI-mapping for specific mutation or substructure to identify mutaiton-associated PPIs
-
-       usage: protiler-mut.py ppi-mapping [-h] -g GENE_ID -i INPUTFILE -f PDB_FILES -b CHAINS [-t DISTANCE_THRESHOLD]
-                                   [-o OUTPUT_FOLDER]
+       usage: protiler-mut ppi-mapping [-h] -g GENE_ID -m MUT_NUMBER -f PDB_PATH -b CHAINS [-t DISTANCE_THRESHOLD] [-o OUTPUTFOLDER]
 
        optional arguments:
        -h, --help            show this help message and exit
@@ -150,21 +156,22 @@ A demo notebook demonstrating how to use ProTiler-Mut as a Python package is ava
 
        -g GENE_ID, --gene_id GENE_ID
                         The symbol of targeted protein-coding gene, for example: ERCC2
-       -i INPUTFILE, --inputfile INPUTFILE
-                        Path output tables file generated in cluster module which annotat the significant mutations, their
-                        cluster assignment and residue position, See example file
-       -f PDB_FILES, --pdb-files PDB_FILES
-                        Comma-separated list of paths of protein complex PDB files involving the target protein.
+       -m MUT_NUMBER, --mut_number MUT_NUMBER
+                        Comma-separated list of amino acids in specific substructure
+       -f PDB_PATH, --pdb_path PDB_PATH
+                        Path to the folder containing all the protein complex PDB files involving the target protein.
        -b CHAINS, --chains CHAINS
                         Comma-separated list of corresponding chain IDs of the target protein(e.g., A,B,A).
 
        Optional arguments for PPI mapping.:
 
-       -t DISTANCE_THRESHOLD, --distance-threshold DISTANCE_THRESHOLD
-                        Distance threshold to determine whether two residues interact between among different
-                        chains(default: 5.0 Å).
-       -o OUTPUT_FOLDER, --output-folder OUTPUT_FOLDER
+       -t DISTANCE_THRESHOLD, --distance_threshold DISTANCE_THRESHOLD
+                        Distance threshold to determine whether two residues interact between among different chains(default:
+                        5.0 Å).
+       -o OUTPUTFOLDER, --outputfolder OUTPUTFOLDER
                         Output folder for results.
+       
+              
 
  ### For a detailed tutorial to run ProTiler-Mut, please refer to the video at Youtube https://www.youtube.com/@bioinforbricker  
 
