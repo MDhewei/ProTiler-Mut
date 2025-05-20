@@ -1,4 +1,4 @@
-[![](https://img.shields.io/badge/Pypi-v0.1.0-519dd9.svg)](https://pypi.org/project/MOFF/)
+[![](https://img.shields.io/badge/Pypi-v0.1.0-519dd9.svg)](https://pypi.org/project/protiler-mut/)
 [![License: GUN](https://img.shields.io/badge/License-GUN-yellow.svg)](https://github.com/MDhewei/MOFF/blob/master/LICENSE)
 ![](https://img.shields.io/badge/language-python-orange.svg)
 
@@ -69,11 +69,11 @@ $ docker pull MDhewei/ProTiler-Mut
 ## How to use ProTiler-Mut
 ### There are three ways to install ProTiler-Mut
 
-### 1.Integrate protiler-mut funcitonal modules into your own python code
-ProTiler-mut can be directly imported in python IDE, seemlessly intergrated into any python code.
-A demo to run protiler-mut as python code can be found here: [Demo.ipynb](https://github.com/MDhewei/ProTiler-Mut/blob/main/Demo.ipynb)
+### 1. Integrate ProTiler-Mut Functional Modules into Your Python Code
+ProTiler-Mut can be seamlessly imported into your Python environment and integrated directly into custom scripts or pipelines.
+A demo notebook demonstrating how to use ProTiler-Mut as a Python package is available here: [Demo.ipynb](https://github.com/MDhewei/ProTiler-Mut/blob/main/Demo.ipynb)
 
-### 2. Use command lines as a standalone software
+### 2. Use ProTiler-Mut via Command Line as a Standalone Tool
 #### ProTiler-Mut cluster: Perform the clustering and categorization of functional mutations
 
        usage: protiler-mut cluster [-h] -i INPUTFILE -g GENE_ID -s SAMPLES -c CONTROL [-p PDB] [-n N_CLUSTERS] [-m METHOD]
