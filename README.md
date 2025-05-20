@@ -74,7 +74,7 @@ ProTiler-Mut can be seamlessly imported into your Python environment and integra
 A demo notebook demonstrating how to use ProTiler-Mut as a Python package is available here: [Demo.ipynb](https://github.com/MDhewei/ProTiler-Mut/blob/main/Demo.ipynb)
 
 ### 2. Use ProTiler-Mut via Command Line as a Standalone Tool
-#### ProTiler-Mut cluster: Perform the clustering and categorization of functional mutations
+#### (1) ProTiler-Mut cluster: Perform the clustering and categorization of functional mutations
 
        usage: protiler-mut cluster [-h] -i INPUTFILE -g GENE_ID -s SAMPLES -c CONTROL [-p PDB] [-n N_CLUSTERS] [-m METHOD]
                                       [-d METRIC] [--pdf-report PDF_REPORT] [-o OUTPUT_FOLDER]
@@ -109,7 +109,7 @@ A demo notebook demonstrating how to use ProTiler-Mut as a Python package is ava
         -o OUTPUT_FOLDER, --output-folder OUTPUT_FOLDER
                         Output folder for saving the results.
 
-#### ProTiler-Mut 3d-rra: Perform "3D-RRA" to call significant substructures in specific mutation clusters
+#### (2) ProTiler-Mut 3d-rra: Perform "3D-RRA" to call significant substructures in specific mutation clusters
 
        usage: protiler-mut 3d-rra [-h] -g GENE_ID -i INPUTFILE -p PDB -n N [-r NUM_PERMUTATIONS] [-t1 DISTANCE_THRESHOLD1]
                               [-t2 DISTANCE_THRESHOLD2] [-o OUTPUT_FOLDER]
@@ -138,7 +138,7 @@ A demo notebook demonstrating how to use ProTiler-Mut as a Python package is ava
        -o OUTPUT_FOLDER, --output-folder OUTPUT_FOLDER
                          Output folder for results.
 
- #### 4. ProTiler-Mut ppi-mapping: Perform PPI-mapping for specific mutation or substructure to identify mutaiton-associated PPIs
+ #### (3). ProTiler-Mut ppi-mapping: Perform PPI-mapping for specific mutation or substructure to identify mutaiton-associated PPIs
 
        usage: protiler-mut.py ppi-mapping [-h] -g GENE_ID -i INPUTFILE -f PDB_FILES -b CHAINS [-t DISTANCE_THRESHOLD]
                                    [-o OUTPUT_FOLDER]
