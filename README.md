@@ -67,13 +67,13 @@ $ docker pull MDhewei/ProTiler-Mut
  ```
 
 ## How to use ProTiler-Mut
-### There are three ways to install ProTiler-Mut
+### There are two ways to use ProTiler-Mut
 
-### 1. Integrate ProTiler-Mut Functional Modules into Your Python Code
+### 1. Integrate ProTiler-Mut Functional Modules into Your Python Code (suitable for users with basic python programing skill)
 ProTiler-Mut can be seamlessly imported into your Python environment and integrated directly into custom scripts or pipelines.
 A demo notebook demonstrating how to use ProTiler-Mut as a Python package is available here: [Demo.ipynb](https://github.com/MDhewei/ProTiler-Mut/blob/main/Demo.ipynb)
 
-### 2. Use ProTiler-Mut via Command Line as a Standalone Tool
+### 2. Use ProTiler-Mut via Command Line as a Standalone Tool (Other users, can be excecuted in any terminal in both Linux or MacOS system)
 #### (1) ProTiler-Mut cluster: Perform the clustering and categorization of functional mutations
 
        usage: protiler-mut cluster [-h] -i INPUTFILE -g GENE_ID -s SAMPLES -c CONTROL [-p PDB] [-n N_CLUSTERS] [-m METHOD]
